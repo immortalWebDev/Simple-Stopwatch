@@ -30,6 +30,16 @@ reset.addEventListener("click", () => {
 
 });
 
+snap.addEventListener("click",() => {
+    if(snapsContainer.children.length < 3)
+    {
+        const snapTime = document.createElement("p");
+        snapTime.innerText = timerDisplay.innerText;
+        snapTime.classList.add('snap-time')
+        snapsContainer.appendChild(snapTime)
+    }
+})
+
 function startTimer() {
   milisec++;
   if (milisec == 100) {
